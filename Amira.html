@@ -747,7 +747,8 @@
             const note = document.createElement("div");
             note.className="tNote";
             media.appendChild(note);
-          } else if(item.video){
+          }
+          if(item.video){
             const vWrap = document.createElement("div");
             const v = document.createElement("video");
             v.controls = true;
