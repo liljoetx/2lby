@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Our Story ❤️</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ctext y='26' font-size='28'%3E%E2%9D%A4%EF%B8%8F%3C/text%3E%3C/svg%3E">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <div class="hearts" id="hearts"></div>
+
+  <!-- Password Gate -->
+  <section class="gate" id="gate">
+    <div class="box card" id="gateBox">
+      <h1>ممنوع الدخول إلا للأميرة 👑❤️</h1>
+      <div class="subtitle">اكتبي الباسورد</div>
+
+      <div class="row">
+        <input id="pass" type="password" inputmode="numeric" placeholder="" autocomplete="off"/>
+        <button id="enterBtn">دخول يا أميرتي</button>
+      </div>
+
+      <div class="hint" id="passHint"></div>
+      <div class="error" id="err">الباسورد غلط… جرّبي تاني 💔</div>
+      <div class="success" id="ok">نورتي يا حبيبتي… ❤️</div>
+    </div>
+  </section>
+
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <div class="box">
+      <div class="lbNav prev" id="lbPrev">›</div>
+      <div class="lbNav next" id="lbNext">‹</div>
+      <img id="lbImg" alt="preview"/>
+      <div class="bar">
+        <div id="lbCap">—</div>
+        <button id="lbClose">إقفال</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Main Content -->
+  <main class="wrap" id="main">
+
+    <header class="hero card">
+      <div class="glow"></div>
+      <div class="content">
+        <div class="badge">
+          ❤️ أول يوم لينا: <span id="anniv"></span> • <span>ذكرياتنا كلها ✨</span>
+        </div>
+
+        <div class="big" id="heroTitle"></div>
+        <p class="loveLine" id="loveLine"></p>
+
+        <div class="musicRow">
+          <button class="musicBtn" id="musicBtn">🎵 شغّلي الأغنية</button>
+          <div class="mini" id="musicHint"></div>
+        </div>
+
+        <nav class="topNav">
+          <a class="chip" href="#timeline">📍 صفحة الذكريات</a>
+          <a class="chip" href="#album">📸 ألبوم صورنا</a>
+          <a class="chip" href="#videos">🎥 ألبوم فيديوهاتنا</a>
+          <a class="chip" href="#secret">🤫 رسالة مهمة</a>
+          <a class="chip" href="#game">🎮 العبي معايا</a>
+        </nav>
+      </div>
+    </header>
+
+    <section class="grid">
+      <div class="card section reveal">
+        <h2>رسايل لأميرتي ❤️</h2>
+        <div class="messages" id="messages"></div>
+
+        <h2 style="margin-top:18px">ليه بحبك؟ 🌸</h2>
+        <button id="reasonBtn">دوسي هنا وشوفي سبب 💗</button>
+        <div class="reasonBox" id="reasonBox"></div>
+      </div>
+
+      <div class="card section reveal">
+        <h2>عيد ميلاد حبنا ⏳💞</h2>
+        <div class="countGrid">
+          <div class="countCell"><b id="cY">00</b><span>سنين</span></div>
+          <div class="countCell"><b id="cMo">00</b><span>شهور</span></div>
+          <div class="countCell"><b id="cD">00</b><span>أيام</span></div>
+          <div class="countCell"><b id="cH">00</b><span>ساعات</span></div>
+          <div class="countCell"><b id="cMi">00</b><span>دقايق</span></div>
+          <div class="countCell"><b id="cS">00</b><span>ثواني</span></div>
+          <div class="countCell"><b id="cMs">000</b><span>ملي ثانية</span></div>
+        </div>
+        <div class="mini" style="margin-top:12px">من يوم <b id="startLine"><span id="anniv2"></span></b>… وإحنا سوا ❤️</div>
+      </div>
+    </section>
+
+    <!-- TIMELINE -->
+    <section class="card section reveal" id="timeline">
+      <h2>صفحة الذكريات 🗓️❤️</h2>
+      <div class="timeline" id="timelineBox"></div>
+    </section>
+
+    <!-- ALBUM -->
+    <section class="card section reveal" id="album">
+      <h2>ألبوم صورنا 📸❤️</h2>
+      <div class="mediaGrid" id="albumGrid"></div>
+    </section>
+
+    <!-- VIDEOS -->
+    <section class="card section reveal" id="videos">
+      <h2>ألبوم فيديوهاتنا 🎥💗</h2>
+      <div class="videoGrid" id="videoGrid"></div>
+    </section>
+
+    <!-- SECRET -->
+    <section class="card section reveal" id="secret">
+      <h2>رسالة مهمة 🤫❤️</h2>
+      <div class="mini">دي بتبان بس لما أميرتي تدوس…</div>
+
+      <div class="secret">
+        <button class="revealBtn" id="revealBtn">دوسي 👑</button>
+        <div class="secretMsg" id="secretMsg"></div>
+      </div>
+    </section>
+
+    <!-- GAME -->
+    <section class="card section reveal" id="game">
+      <h2>العبي معايا 🎮💗</h2>
+      <div class="mini">اختاري اللعبة اللي عايزاها 👇</div>
+
+      <div class="gameTabs">
+        <button class="gameTab active" id="tabCatch" data-panel="panelCatch">🎯 امسكي القلوب</button>
+        <button class="gameTab" id="tabMemory" data-panel="panelMemory">🧠 ميموري القلوب</button>
+      </div>
+
+      <!-- Panel 1: Catch the hearts -->
+      <div class="gamePanel" id="panelCatch">
+        <div class="mini">امسكي أكبر عدد قلوب في الوقت المحدد… وشوفي هتجيبي كام! 😄</div>
+
+        <div class="gameBar">
+          <button class="musicBtn" id="gameStartBtn">ابدأي اللعبة ▶️</button>
+          <div class="gameStat">⏱️ <span id="gameTime">20</span>s</div>
+          <div class="gameStat">💗 النقاط: <span id="gameScore">0</span></div>
+          <div class="gameStat">🏆 أعلى نقاط: <span id="gameBest">0</span></div>
+        </div>
+
+        <div class="gameArea" id="gameArea">
+          <div class="gameHint" id="gameHint">دوسي "ابدأي اللعبة" وابدأي تمسكي القلوب 💕</div>
+        </div>
+
+        <div class="gameResult" id="gameResult"></div>
+      </div>
+
+      <!-- Panel 2: Memory match -->
+      <div class="gamePanel" id="panelMemory" hidden>
+        <div class="mini">قلّبي الكروت ولاقي كل قلبين متشابهين ببعض بأقل عدد محاولات 🧠</div>
+
+        <div class="gameBar">
+          <button class="musicBtn" id="memoryStartBtn">ابدأي ميموري 🔁</button>
+          <div class="gameStat">🔄 المحاولات: <span id="memoryMoves">0</span></div>
+          <div class="gameStat">🏆 أقل محاولات: <span id="memoryBest">—</span></div>
+        </div>
+
+        <div class="memoryGrid" id="memoryGrid"></div>
+
+        <div class="gameResult" id="memoryResult"></div>
+      </div>
+    </section>
+
+    <footer id="footerText"></footer>
+  </main>
+
+  <div class="toTop" id="toTop" title="لفوق">↑</div>
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
